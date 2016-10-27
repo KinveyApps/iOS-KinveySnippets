@@ -1,0 +1,37 @@
+PODS:
+  - KeychainAccess (3.0.1)
+  - Kinvey (3.3.1):
+    - KeychainAccess (~> 3.0)
+    - PromiseKit (~> 4.0)
+    - Realm (~> 2.0)
+    - RealmSwift (~> 2.0)
+  - PromiseKit (4.0.4):
+    - PromiseKit/Foundation (= 4.0.4)
+    - PromiseKit/QuartzCore (= 4.0.4)
+    - PromiseKit/UIKit (= 4.0.4)
+  - PromiseKit/CorePromise (4.0.4)
+  - PromiseKit/Foundation (4.0.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.0.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.0.4):
+    - PromiseKit/CorePromise
+  - Realm (2.0.2):
+    - Realm/Headers (= 2.0.2)
+  - Realm/Headers (2.0.2)
+  - RealmSwift (2.0.2):
+    - Realm (= 2.0.2)
+
+DEPENDENCIES:
+  - Kinvey
+
+SPEC CHECKSUMS:
+  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  Kinvey: aefd539b20ecec7aaf916671fde695818585b39d
+  PromiseKit: 8e8ee39d33ff199d92a1a883b5396f6285be6c91
+  Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
+  RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
+
+PODFILE CHECKSUM: '09145d6ed1eff0ca1d069df7e3ee385beab064d4'
+
+COCOAPODS: 1.1.1
