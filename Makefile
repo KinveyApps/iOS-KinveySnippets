@@ -5,10 +5,10 @@ clean:
 
 cocoapods-install:
 	cd 3x/Swift-3; \
-	pod install
+	pod install --repo-update
 	
 	cd 3x/Swift-2.3; \
-	pod install
+	pod install --repo-update
 
 build: cocoapods-install
 	cd 3x/Swift-3; \
