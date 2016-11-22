@@ -32,7 +32,7 @@ cocoapods-install:
 
 build: cocoapods-install
 	cd 3x/Swift-3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build | xcpretty
 	
 	cd 3x/Swift-2.3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build | xcpretty
