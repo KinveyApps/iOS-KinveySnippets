@@ -1,0 +1,6 @@
+github "kishikawakatsumi/KeychainAccess" "v3.0.1"
+github "tjboneman/NSPredicate-MongoDB-Adaptor" "19e76bab788f4a96e210f4ffca196cc9e52f856a"
+github "Hearst-DD/ObjectMapper" "2.2.1"
+github "mxcl/PromiseKit" "4.0.5"
+github "realm/realm-cocoa" "v2.1.0"
+github "Kinvey/ios-library" "f7d5b3f4ac2394a82fb1321032b69ec0060f0a4d"
