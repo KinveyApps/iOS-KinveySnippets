@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57941C5A1DECE8DA00C27036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57941C591DECE8DA00C27036 /* AppDelegate.swift */; };
+		57941C5C1DECE8DA00C27036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57941C5B1DECE8DA00C27036 /* ViewController.swift */; };
+		57941C5F1DECE8DA00C27036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57941C5D1DECE8DA00C27036 /* Main.storyboard */; };
+		57941C611DECE8DA00C27036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57941C601DECE8DA00C27036 /* Assets.xcassets */; };
+		57941C641DECE8DA00C27036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57941C621DECE8DA00C27036 /* LaunchScreen.storyboard */; };
+		57941C6F1DECE8DA00C27036 /* KinveyCarthageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57941C6E1DECE8DA00C27036 /* KinveyCarthageTestTests.swift */; };
+		57941C7A1DECE8DA00C27036 /* KinveyCarthageTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57941C791DECE8DA00C27036 /* KinveyCarthageTestUITests.swift */; };
+		57941C891DECFE1200C27036 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941C881DECFE1200C27036 /* Kinvey.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57941C6B1DECE8DA00C27036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57941C4E1DECE8DA00C27036 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57941C551DECE8DA00C27036;
+			remoteInfo = KinveyCarthageTest;
+		};
+		57941C761DECE8DA00C27036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57941C4E1DECE8DA00C27036 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57941C551DECE8DA00C27036;
+			remoteInfo = KinveyCarthageTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57941C561DECE8DA00C27036 /* KinveyCarthageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinveyCarthageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57941C591DECE8DA00C27036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57941C5B1DECE8DA00C27036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57941C5E1DECE8DA00C27036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57941C601DECE8DA00C27036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57941C631DECE8DA00C27036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57941C651DECE8DA00C27036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57941C6A1DECE8DA00C27036 /* KinveyCarthageTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinveyCarthageTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57941C6E1DECE8DA00C27036 /* KinveyCarthageTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinveyCarthageTestTests.swift; sourceTree = "<group>"; };
+		57941C701DECE8DA00C27036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57941C751DECE8DA00C27036 /* KinveyCarthageTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinveyCarthageTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57941C791DECE8DA00C27036 /* KinveyCarthageTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinveyCarthageTestUITests.swift; sourceTree = "<group>"; };
+		57941C7B1DECE8DA00C27036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57941C881DECFE1200C27036 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kinvey.framework; path = Carthage/Build/iOS/Kinvey.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57941C531DECE8DA00C27036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57941C891DECFE1200C27036 /* Kinvey.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C671DECE8DA00C27036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C721DECE8DA00C27036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57941C4D1DECE8DA00C27036 = {
+			isa = PBXGroup;
+			children = (
+				57941C581DECE8DA00C27036 /* KinveyCarthageTest */,
+				57941C6D1DECE8DA00C27036 /* KinveyCarthageTestTests */,
+				57941C781DECE8DA00C27036 /* KinveyCarthageTestUITests */,
+				57941C571DECE8DA00C27036 /* Products */,
+				57941C871DECFE1100C27036 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57941C571DECE8DA00C27036 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57941C561DECE8DA00C27036 /* KinveyCarthageTest.app */,
+				57941C6A1DECE8DA00C27036 /* KinveyCarthageTestTests.xctest */,
+				57941C751DECE8DA00C27036 /* KinveyCarthageTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57941C581DECE8DA00C27036 /* KinveyCarthageTest */ = {
+			isa = PBXGroup;
+			children = (
+				57941C591DECE8DA00C27036 /* AppDelegate.swift */,
+				57941C5B1DECE8DA00C27036 /* ViewController.swift */,
+				57941C5D1DECE8DA00C27036 /* Main.storyboard */,
+				57941C601DECE8DA00C27036 /* Assets.xcassets */,
+				57941C621DECE8DA00C27036 /* LaunchScreen.storyboard */,
+				57941C651DECE8DA00C27036 /* Info.plist */,
+			);
+			path = KinveyCarthageTest;
+			sourceTree = "<group>";
+		};
+		57941C6D1DECE8DA00C27036 /* KinveyCarthageTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				57941C6E1DECE8DA00C27036 /* KinveyCarthageTestTests.swift */,
+				57941C701DECE8DA00C27036 /* Info.plist */,
+			);
+			path = KinveyCarthageTestTests;
+			sourceTree = "<group>";
+		};
+		57941C781DECE8DA00C27036 /* KinveyCarthageTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57941C791DECE8DA00C27036 /* KinveyCarthageTestUITests.swift */,
+				57941C7B1DECE8DA00C27036 /* Info.plist */,
+			);
+			path = KinveyCarthageTestUITests;
+			sourceTree = "<group>";
+		};
+		57941C871DECFE1100C27036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57941C881DECFE1200C27036 /* Kinvey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57941C551DECE8DA00C27036 /* KinveyCarthageTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57941C7E1DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTest" */;
+			buildPhases = (
+				57941C521DECE8DA00C27036 /* Sources */,
+				57941C531DECE8DA00C27036 /* Frameworks */,
+				57941C541DECE8DA00C27036 /* Resources */,
+				57941C8A1DECFE2A00C27036 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KinveyCarthageTest;
+			productName = KinveyCarthageTest;
+			productReference = 57941C561DECE8DA00C27036 /* KinveyCarthageTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57941C691DECE8DA00C27036 /* KinveyCarthageTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57941C811DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTestTests" */;
+			buildPhases = (
+				57941C661DECE8DA00C27036 /* Sources */,
+				57941C671DECE8DA00C27036 /* Frameworks */,
+				57941C681DECE8DA00C27036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57941C6C1DECE8DA00C27036 /* PBXTargetDependency */,
+			);
+			name = KinveyCarthageTestTests;
+			productName = KinveyCarthageTestTests;
+			productReference = 57941C6A1DECE8DA00C27036 /* KinveyCarthageTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57941C741DECE8DA00C27036 /* KinveyCarthageTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57941C841DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTestUITests" */;
+			buildPhases = (
+				57941C711DECE8DA00C27036 /* Sources */,
+				57941C721DECE8DA00C27036 /* Frameworks */,
+				57941C731DECE8DA00C27036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57941C771DECE8DA00C27036 /* PBXTargetDependency */,
+			);
+			name = KinveyCarthageTestUITests;
+			productName = KinveyCarthageTestUITests;
+			productReference = 57941C751DECE8DA00C27036 /* KinveyCarthageTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57941C4E1DECE8DA00C27036 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Kinvey;
+				TargetAttributes = {
+					57941C551DECE8DA00C27036 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5W7CYNR7UE;
+						ProvisioningStyle = Automatic;
+					};
+					57941C691DECE8DA00C27036 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57941C551DECE8DA00C27036;
+					};
+					57941C741DECE8DA00C27036 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57941C551DECE8DA00C27036;
+					};
+				};
+			};
+			buildConfigurationList = 57941C511DECE8DA00C27036 /* Build configuration list for PBXProject "KinveyCarthageTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57941C4D1DECE8DA00C27036;
+			productRefGroup = 57941C571DECE8DA00C27036 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57941C551DECE8DA00C27036 /* KinveyCarthageTest */,
+				57941C691DECE8DA00C27036 /* KinveyCarthageTestTests */,
+				57941C741DECE8DA00C27036 /* KinveyCarthageTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57941C541DECE8DA00C27036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57941C641DECE8DA00C27036 /* LaunchScreen.storyboard in Resources */,
+				57941C611DECE8DA00C27036 /* Assets.xcassets in Resources */,
+				57941C5F1DECE8DA00C27036 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C681DECE8DA00C27036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C731DECE8DA00C27036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57941C8A1DECFE2A00C27036 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kinvey.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57941C521DECE8DA00C27036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57941C5C1DECE8DA00C27036 /* ViewController.swift in Sources */,
+				57941C5A1DECE8DA00C27036 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C661DECE8DA00C27036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57941C6F1DECE8DA00C27036 /* KinveyCarthageTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57941C711DECE8DA00C27036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57941C7A1DECE8DA00C27036 /* KinveyCarthageTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57941C6C1DECE8DA00C27036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57941C551DECE8DA00C27036 /* KinveyCarthageTest */;
+			targetProxy = 57941C6B1DECE8DA00C27036 /* PBXContainerItemProxy */;
+		};
+		57941C771DECE8DA00C27036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57941C551DECE8DA00C27036 /* KinveyCarthageTest */;
+			targetProxy = 57941C761DECE8DA00C27036 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57941C5D1DECE8DA00C27036 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57941C5E1DECE8DA00C27036 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57941C621DECE8DA00C27036 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57941C631DECE8DA00C27036 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57941C7C1DECE8DA00C27036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57941C7D1DECE8DA00C27036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57941C7F1DECE8DA00C27036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W7CYNR7UE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = KinveyCarthageTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		57941C801DECE8DA00C27036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W7CYNR7UE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = KinveyCarthageTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		57941C821DECE8DA00C27036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KinveyCarthageTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinveyCarthageTest.app/KinveyCarthageTest";
+			};
+			name = Debug;
+		};
+		57941C831DECE8DA00C27036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KinveyCarthageTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinveyCarthageTest.app/KinveyCarthageTest";
+			};
+			name = Release;
+		};
+		57941C851DECE8DA00C27036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = KinveyCarthageTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KinveyCarthageTest;
+			};
+			name = Debug;
+		};
+		57941C861DECE8DA00C27036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = KinveyCarthageTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyCarthageTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KinveyCarthageTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57941C511DECE8DA00C27036 /* Build configuration list for PBXProject "KinveyCarthageTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57941C7C1DECE8DA00C27036 /* Debug */,
+				57941C7D1DECE8DA00C27036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57941C7E1DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57941C7F1DECE8DA00C27036 /* Debug */,
+				57941C801DECE8DA00C27036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57941C811DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57941C821DECE8DA00C27036 /* Debug */,
+				57941C831DECE8DA00C27036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57941C841DECE8DA00C27036 /* Build configuration list for PBXNativeTarget "KinveyCarthageTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57941C851DECE8DA00C27036 /* Debug */,
+				57941C861DECE8DA00C27036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57941C4E1DECE8DA00C27036 /* Project object */;
+}

@@ -4,4 +4,5 @@
 Pods
 build
 Podfile.lock
-Carthage
+SanityTest/Carthage/*/Carthage
+SanityTest/Carthage/*/Cartfile.resolved
