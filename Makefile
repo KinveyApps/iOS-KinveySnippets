@@ -46,10 +46,13 @@ build: cocoapods-install carthage-boostrap build-only
 	
 build-only:
 	cd 3x/Swift-3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build | xcpretty
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
 	
 	cd 3x/Swift-2.3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build | xcpretty
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
+	
+	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
+	xcodebuild clean build | xcpretty
 	
 	cd SanityTest/Carthage/KinveyCarthageTest-Latest; \
-	xcodebuild OBJROOT=${CURDIR}/build SYMROOT=${CURDIR}/build clean build | xcpretty
+	xcodebuild clean build | xcpretty
