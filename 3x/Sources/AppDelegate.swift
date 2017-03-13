@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func micApiVersion() {
-        Client.sharedClient.micApiVersion = "v2" //v1 is the default value
+        Client.sharedClient.micApiVersion = .v2 //v1 is the default value
     }
     
 #if swift(>=3.0)
@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loginAuthorization() {
-        User.loginWithAuthorization(
+        User.login(
             redirectURI: URL(string: "<#myRedirectURI://#>")!,
             username: "<#myUsername#>",
             password: "<#myPassword#>"

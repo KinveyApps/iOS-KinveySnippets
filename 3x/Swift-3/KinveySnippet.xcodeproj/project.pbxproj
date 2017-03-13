@@ -368,7 +368,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 085C6CF267FE42C17A0DB5BC /* Pods-KinveySnippet.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W7CYNR7UE;
 				INFOPLIST_FILE = ../Resources/Info.plist;
@@ -384,7 +383,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CC945009E071A8657334496 /* Pods-KinveySnippet.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W7CYNR7UE;
 				INFOPLIST_FILE = ../Resources/Info.plist;

@@ -17,7 +17,7 @@ class CustomUser: User {
     override func mapping(map: Map) {
         super.mapping(map: map)
         
-        address <- map["address"]
+        address <- ("address", map["address"])
     }
 }
 
@@ -30,7 +30,7 @@ class CustomUser: User {
     override func mapping(map: Map) {
         super.mapping(map)
         
-        address <- map["address"]
+        address <- ("address", map["address"])
     }
 }
 

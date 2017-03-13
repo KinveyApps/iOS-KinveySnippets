@@ -47,7 +47,7 @@ class Book2: Entity {
         super.propertyMapping(map)
     
         //this maps the backend property "date" to the member variable "publishDate" using a ISO 8601 date transform
-        publishDate <- ("publishDate", map["date"], ISO8601DateTransform())
+        publishDate <- ("publishDate", map["date"], KinveyDateTransform())
     }
 }
 

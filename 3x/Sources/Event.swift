@@ -25,7 +25,7 @@ class Event : Entity {
         super.propertyMapping(map)
         
         name <- ("name", map["name"])
-        date <- ("date", map["date"], ISO8601DateTransform())
+        date <- ("date", map["date"], KinveyDateTransform())
         location <- ("location", map["location"])
     }
 }
