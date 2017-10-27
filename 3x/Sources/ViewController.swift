@@ -73,11 +73,12 @@ class ViewController: UIViewController {
     }
     
     func destroy() {
-        Kinvey.sharedClient.activeUser?.destroy { error in
-            if let error = error {
-                print("error \(error) when deleting active user")
-            } else {
+        Kinvey.sharedClient.activeUser?.destroy { (result: Result<Void, Swift.Error>) in
+            switch result {
+            case .success:
                 print("active user deleted")
+            case .failure(let error):
+                print("error \(error) when deleting active user")
             }
         }
     }
@@ -96,42 +97,47 @@ class ViewController: UIViewController {
     
     func sendEmailConfirmationStatic(user: User) {
         if let username = user.username {
-            User.sendEmailConfirmation(forUsername: username) { error in
-                if let error = error {
-                    //fail
+            User.sendEmailConfirmation(forUsername: username, options: nil) { (result: Result<Void, Swift.Error>) in
+                switch result {
+                case .success:
+                    print("success")
+                case .failure(let error):
                     print("Error: \(error)")
-                } else {
-                    // success
                 }
             }
         }
     }
     
     func sendEmailConfirmationInstance(user: User) {
-        user.sendEmailConfirmation() { error in
-            if let error = error {
-                //fail
+        user.sendEmailConfirmation() { (result: Result<Void, Swift.Error>) in
+            switch result {
+            case .success:
+                print("success")
+            case .failure(let error):
                 print("Error: \(error)")
-            } else {
-                // success
             }
         }
     }
     
     func resetPassword(user: User) {
-        user.resetPassword { error in
-            if let error = error {
-                //error
+        user.resetPassword { (result: Result<Void, Swift.Error>) in
+            switch result {
+            case .success:
+                print("success")
+            case .failure(let error):
                 print("Error: \(error)")
-            } else {
-                //success
             }
         }
     }
     
     func forgotUsername() {
-        User.forgotUsername(email: "your@email.com") { error in
-            // error will be nil if the request was sent
+        User.forgotUsername(email: "your@email.com", options: nil) { (result: Result<Void, Swift.Error>) in
+            switch result {
+            case .success:
+                print("success")
+            case .failure(let error):
+                print("Error: \(error)")
+            }
         }
     }
     
@@ -418,16 +424,17 @@ class ViewController: UIViewController {
 #if swift(>=3.0)
     
     func signup2() {
-        User.signup(username: "kinvey", password: "12345") { user, error in
-            if let _ = user {
+        User.signup(username: "kinvey", password: "12345", options: nil) { (result: Result<User, Swift.Error>) in
+            switch result {
+            case .success(let user):
                 //was successful!
                 let alert = UIAlertController(
                     title: NSLocalizedString("Account Creation Successful", comment: "account success note title"),
-                    message: NSLocalizedString("User created. Welcome!", comment: "account success message body"),
+                    message: NSLocalizedString("User \(user.userId) created. Welcome!", comment: "account success message body"),
                     preferredStyle: .alert
                 )
                 self.present(alert, animated: true, completion: nil)
-            } else if let error = error as? NSError {
+            case .failure(let error):
                 //there was an error with the update save
                 let message = error.localizedDescription
                 let alert = UIAlertController(
@@ -441,13 +448,14 @@ class ViewController: UIViewController {
     }
     
     func login2() {
-        User.login(username: "kinvey", password: "12345") { user, error in
-            if let user = user {
+        User.login(username: "kinvey", password: "12345", options: nil) { (result: Result<User, Swift.Error>) in
+            switch result {
+            case .success(let user):
                 //the log-in was successful and the user is now the active user and credentials saved
                 
                 //hide log-in view and show main app content
                 print("User: \(user)")
-            } else if let error = error as? NSError {
+            case .failure(let error):
                 //there was an error with the update save
                 let message = error.localizedDescription
                 let alert = UIAlertController(

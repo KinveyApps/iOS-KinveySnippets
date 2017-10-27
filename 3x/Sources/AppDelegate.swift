@@ -56,7 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Kinvey.sharedClient.initialize(appKey: "<#Your app key#>", appSecret: "<#Your app secret#>")
         
-        Kinvey.sharedClient.push.registerForPush()
+        if #available(iOS 10.0, *) {
+            Kinvey.sharedClient.push.registerForNotifications(options: nil)
+        } else {
+            Kinvey.sharedClient.push.registerForPush() { (result: Result<Bool, Swift.Error>) in
+            }
+        }
         
         return true
     }
