@@ -31,10 +31,11 @@ clean:
 cocoapods-install:
 	cd 3x/Swift-3; \
 	pod install --repo-update
-	
+
+cocoapods-install-swift-2.3:
 	cd 3x/Swift-2.3; \
 	pod install --repo-update
-	
+
 carthage-boostrap:
 	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
 	carthage bootstrap --platform ios --no-use-binaries
@@ -48,11 +49,13 @@ build-only:
 	cd 3x/Swift-3; \
 	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
 	
-	cd 3x/Swift-2.3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
-	
 	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
 	xcodebuild clean build | xcpretty
 	
 	cd SanityTest/Carthage/KinveyCarthageTest-Latest; \
 	xcodebuild clean build | xcpretty
+
+build-only-swift-2.3:
+	cd 3x/Swift-2.3; \
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
+
