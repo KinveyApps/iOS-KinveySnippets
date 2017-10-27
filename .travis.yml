@@ -4,4 +4,5 @@ before_install:
 - sudo gem install cocoapods
 - pod repo update
 - sudo gem install xcpretty
+- carthage version
 script: travis_wait 30 set -o pipefail && make build

@@ -41,10 +41,10 @@ cocoapods-install-swift-2.3:
 
 carthage-boostrap:
 	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
-	carthage bootstrap --platform ios --no-use-binaries
+	carthage bootstrap --platform ios
 	
 	cd SanityTest/Carthage/KinveyCarthageTest-Latest; \
-	carthage bootstrap --platform ios --no-use-binaries
+	carthage bootstrap --platform ios
 
 build: cocoapods-install carthage-boostrap build-only
 	
