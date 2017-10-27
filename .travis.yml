@@ -1,7 +1,7 @@
 language: objective-c
-osx_image: xcode8.1
+osx_image: xcode9
 before_install:
 - sudo gem install cocoapods
 - pod repo update
 - sudo gem install xcpretty
-script: make build-only
+script: set -o pipefail && make build
