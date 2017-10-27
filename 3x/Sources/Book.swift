@@ -12,8 +12,17 @@ import Kinvey
     
 class Book: Entity {
     
+#if swift(>=4.0)
+    @objc dynamic var title: String?
+#else
     dynamic var title: String?
+#endif
+
+#if swift(>=4.0)
+    @objc dynamic var authorName: String?
+#else
     dynamic var authorName: String?
+#endif
     
     override class func collectionName() -> String {
         //return the name of the backend collection corresponding to this entity
@@ -40,7 +49,11 @@ class Book2: Entity {
     }
     
     //the following code shows how to map a NSDate property in the "Book" entity using a date transform
+#if swift(>=4.0)
+    @objc dynamic var publishDate: Date?
+#else
     dynamic var publishDate: Date?
+#endif
     
     override func propertyMapping(_ map: Map) {
         //This maps the "_id", "_kmd" and "_acl" properties

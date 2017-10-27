@@ -31,6 +31,9 @@ clean:
 cocoapods-install:
 	cd 3x/Swift-3; \
 	pod install --repo-update
+	
+	cd 3x/Swift-4; \
+	pod install --repo-update
 
 cocoapods-install-swift-2.3:
 	cd 3x/Swift-2.3; \
@@ -47,6 +50,9 @@ build: cocoapods-install carthage-boostrap build-only
 	
 build-only:
 	cd 3x/Swift-3; \
+	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
+	
+	cd 3x/Swift-4; \
 	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
 	
 	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
