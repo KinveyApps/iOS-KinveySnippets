@@ -51,6 +51,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        return true
 //    }
     
+    func _application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        //Your App Setup...
+        
+        Kinvey.sharedClient.initialize(appKey: "<#Your app key#>", appSecret: "<#Your app secret#>")
+        
+        let completionHandler = { (result: Result<Bool, Swift.Error>) in
+            switch result {
+            case .success(let succeed):
+                print("succeed: \(succeed)")
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
+        if #available(iOS 10.0, *) {
+            Kinvey.sharedClient.push.registerForNotifications(options: nil, completionHandler: completionHandler)
+        } else {
+            Kinvey.sharedClient.push.registerForPush(completionHandler: completionHandler)
+        }
+        
+        return true
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         //Your App Setup...
         
