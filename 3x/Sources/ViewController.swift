@@ -21,6 +21,39 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func userLogin() {
+        User.login(username: "kinvey", password: "12345", options: nil) { (result: Result<User, Swift.Error>) in
+            switch result {
+            case .success(let user):
+                //the log-in was successful and the user is now the active user and credentials saved
+                //hide log-in view and show main app content
+                print("User: \(user)")
+            case .failure(let error):
+                //there was an error with the update save
+                let message = error.localizedDescription
+                let alert = UIAlertController(
+                    title: NSLocalizedString("Create account failed", comment: "Sign account failed"),
+                    message: message,
+                    preferredStyle: .alert
+                )
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func loginFacebook() {
+        //Login with Facebook
+        let facebookDictionary: [String : Any] = [:]//<#...#>
+        User.login(authSource: .facebook, facebookDictionary) { (result: Result<User, Swift.Error>) in
+            switch result {
+            case .success(let user):
+                print("User: \(user)")
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+    
     func login() {
         let username = "test"
         let password = "test"
