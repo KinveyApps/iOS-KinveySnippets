@@ -6,7 +6,7 @@ target 'SanityTest' do
   use_frameworks!
 
   # Pods for SanityTest
-  pod 'Kinvey', :path => '../../swift-sdk'
+  pod 'Kinvey', :git => 'git@github.com:Kinvey/swift-sdk.git', :branch => 'develop'
 
   target 'SanityTestTests' do
     inherit! :search_paths
