@@ -3,6 +3,4 @@
 **/*.xcworkspace/xcuserdata
 Pods
 Podfile.lock
-SanityTest/Carthage/**/Carthage/Checkouts
-SanityTest/Carthage/**/Cartfile.resolved
-SanityTest/Carthage/**/build
+SanityTest/build

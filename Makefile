@@ -1,67 +1,15 @@
 all: build
+	
+build:
+	cd devcenter-snippets-collector; \
+	swift build; \
+	.build/x86_64-apple-macosx10.10/debug/devcenter-snippets-collector ../../devcenter ../CodeSnippets.swift
+	cd SanityTest; \
+	xcodebuild -workspace SanityTest.xcworkspace -scheme SanityTest -sdk iphonesimulator -configuration Debug | xcpretty
 
 clean:
-	rm -Rf build
-	
-	rm -Rf 3x/Swift-3/Pods
-	rm -Rf 3x/Swift-3/Podfile.lock
-	rm -Rf 3x/Swift-3/build
-	
-	rm -Rf 3x/Swift-2.3/Pods
-	rm -Rf 3x/Swift-2.3/Podfile.lock
-	rm -Rf 3x/Swift-2.3/build
-	
-	rm -Rf 1x/ObjC/Pods
-	rm -Rf 1x/ObjC/Podfile.lock
-	rm -Rf 1x/ObjC/build
-	
-	rm -Rf 1x/Swift-3/Pods
-	rm -Rf 1x/Swift-3/Podfile.lock
-	rm -Rf 1x/Swift-3/build
-	
-	rm -Rf 1x/Swift-2.3/Pods
-	rm -Rf 1x/Swift-2.3/Podfile.lock
-	rm -Rf 1x/Swift-2.3/build
-	
-	rm -Rf SanityTest/Carthage/KinveyCarthageTest-Develop/Carthage
-	rm -Rf SanityTest/Carthage/KinveyCarthageTest-Develop/Cartfile.resolved
-	rm -Rf SanityTest/Carthage/KinveyCarthageTest-Latest/Carthage
-	rm -Rf SanityTest/Carthage/KinveyCarthageTest-Latest/Cartfile.resolved
+	echo "#error(\"Please run the devcenter-snippets-collector tool first\")" > CodeSnippets.swift
 
-cocoapods-install:
-	cd 3x/Swift-3; \
-	pod install --repo-update
-	
-	cd 3x/Swift-4; \
-	pod install --repo-update
-
-cocoapods-install-swift-2.3:
-	cd 3x/Swift-2.3; \
-	pod install --repo-update
-
-carthage-boostrap:
-	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
-	carthage bootstrap --platform ios
-	
-	cd SanityTest/Carthage/KinveyCarthageTest-Latest; \
-	carthage bootstrap --platform ios
-
-build: cocoapods-install carthage-boostrap build-only
-	
-build-only:
-	cd 3x/Swift-3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
-	
-	cd 3x/Swift-4; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
-	
-	cd SanityTest/Carthage/KinveyCarthageTest-Develop; \
-	xcodebuild clean build | xcpretty
-	
-	cd SanityTest/Carthage/KinveyCarthageTest-Latest; \
-	xcodebuild clean build | xcpretty
-
-build-only-swift-2.3:
-	cd 3x/Swift-2.3; \
-	xcodebuild -workspace KinveySnippet.xcworkspace -scheme KinveySnippet clean build | xcpretty
-
+git-clone:
+	cd ..; \
+	git clone git@github.com:Kinvey/devcenter.git
