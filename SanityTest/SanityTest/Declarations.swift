@@ -27,6 +27,7 @@ class Event: Entity {
         return "Event"
     }
     
+    @available(*, deprecated, message: "Please use Swift.Codable instead")
     override func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
@@ -49,10 +50,12 @@ class MyFile: File {
     @objc
     dynamic var label: String?
     
+    @available(*, deprecated, message: "Please use Swift.Codable instead")
     public convenience required init?(map: Map) {
-        self.init()
+        self.init(map: map)
     }
     
+    @available(*, deprecated, message: "Please use Swift.Codable instead")
     override func mapping(map: Map) {
         super.mapping(map: map)
         
@@ -63,7 +66,7 @@ class MyFile: File {
 
 let book = Book()
 let coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-let dataStore = DataStore<Book>.collection()
+let dataStore = try! DataStore<Book>.collection()
 let query = Query()
 let redirect = URL(string: "")!
 let url = URL(string: "")!
@@ -77,4 +80,8 @@ let user = User()
 
 extension CodeSnippets: CLLocationManagerDelegate {
     
+}
+
+func printAny(_ any: Any?) {
+    print(any ?? "")
 }

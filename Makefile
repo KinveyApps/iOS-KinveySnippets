@@ -3,7 +3,7 @@ all: build
 build:
 	cd devcenter-snippets-collector; \
 	swift build; \
-	.build/x86_64-apple-macosx10.10/debug/devcenter-snippets-collector ../../devcenter ../CodeSnippets.swift
+	swift run devcenter-snippets-collector ../../devcenter ../CodeSnippets.swift
 	cd SanityTest; \
 	xcodebuild -workspace SanityTest.xcworkspace -scheme SanityTest -sdk iphonesimulator -configuration Debug | xcpretty
 

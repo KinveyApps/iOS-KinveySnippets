@@ -102,9 +102,17 @@ let output = snippets.enumerated().map { index, snippet -> [String] in
     var lines = [
         "",
         "// \(file):\(snippet.line)",
-        "func snippet\(index)() -> \(returnIsVoid ? "Void" : "Any?") {",
+        "func snippet\(index)() throws -> \(returnIsVoid ? "Void" : "Any?") {",
     ]
-    lines.append(contentsOf: linesOfCode.map { "    \($0)" })
+    lines.append(contentsOf: linesOfCode.compactMap {
+        guard !$0.hasPrefix("import ") else {
+            return nil
+        }
+        guard !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return ""
+        }
+        return "    \($0)"
+    })
     lines.append("    ")
     lines.append("    //****************************************")
     lines.append(contentsOf: variables.map { "    printAny(\($0))" })
@@ -120,12 +128,16 @@ var lines = [
     "import MapKit",
     "import UIKit",
     "",
-    "func printAny(_ any: Any?) { print(any ?? \"\") }",
-    "",
     "class CodeSnippets: UIViewController {"
 ]
-lines.append(contentsOf: output.flatMap { $0 }.map { "    \($0)" })
+lines.append(contentsOf: output.flatMap { $0 }.map{
+    guard !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+        return ""
+    }
+    return "    \($0)"
+})
 lines.append("")
 lines.append("}")
-try! lines.joined(separator: "\n").write(to: outputFile, atomically: true, encoding: .utf8)
+let finalOutput = lines.joined(separator: "\n")
+try! finalOutput.write(to: outputFile, atomically: true, encoding: .utf8)
 print("\(snippets.count) snippets")
